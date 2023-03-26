@@ -1,11 +1,35 @@
-var numFirst = prompt('Enter number');
-var numSecond = prompt('Enter number');
+var numFirst = +prompt('Enter number');
+var numSecond = +prompt('Enter number');
 var matSign = prompt('Select sign: +, -, *, /, %.');
 
-function doMath(numFirst, matSign, numSecond) {
-    return eval(numFirst + matSign + numSecond);
+doMath();
+
+function doMath() {
+    switch (matSign) {
+        case '+':
+            alert(numFirst + numSecond);
+            break;
+
+        case '-':
+            alert(numFirst - numSecond);
+            break;
+
+        case '*':
+            alert(numFirst * numSecond);
+            break;
+
+        case '/':
+            alert(numFirst / numSecond);
+            break;
+
+        case '%':
+            alert(numFirst % numSecond);
+            break;
+
+        default:
+            alert( "Нет таких значений" );
+    }
 }
-alert(doMath(numFirst, matSign, numSecond));
 
 
 var degree = prompt('Enter degree for number 2');
@@ -14,13 +38,16 @@ function degreeNum(degree) {
     if (degree > 1) { 
         return degreeNum(degree / 2);
     }
+
     else if (degree == 1) {
         return 'Yes';
     }
+
     if (degree < 1) {
         return 'No';
     }
 }
+
 alert(degreeNum(degree));
 
 
@@ -30,30 +57,36 @@ var num = 2;
 function degreeNum(degree, num) {
     if (degree == 1) { 
         return 'Yes';
-    } else if (degree < 1) {
+    }
+    
+    else if (degree < 1) {
         return 'No';
-    } else {
+    } 
+    
+    else {
         (degree > 1);
-        return degreeNum(degree / 2, num);
+        return degreeNum(degree / 2);
     }
 }
+
 alert(degreeNum(degree));
 
 
 var degree = +prompt('Enter degree for number 2');
 
 function degreeNum(degree) {
+    for (sum = 0; sum < degree;) {
+        degree = degree / 2;
+        console.log(degree);
 
-for (sum = 0; sum < degree;) {
-    degree = degree / 2;
-    console.log(degree);
-    if (degree == 1) {
-        return 'Yes';
-    }
-    if (degree == 0) {
-        return 'No';
-        console.log(sum);
-    }    
+        if (degree == 1) {
+            return 'Yes';
+        }
+
+        if (degree == 0) {
+            return 'No';
+            console.log(sum);
+        }    
     }
 }
 
