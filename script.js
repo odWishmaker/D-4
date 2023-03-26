@@ -82,7 +82,7 @@ function degreeNum(degree) {
             return 'Yes';
         }
 
-        if (degree == 0) {
+        else {
             return 'No';
         }    
     }
