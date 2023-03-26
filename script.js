@@ -54,7 +54,7 @@ alert(degreeNum(degree));
 var degree = prompt('Enter degree for number 2');
 var num = 2;
 
-function degreeNum(degree, num) {
+function degreeNum(degree) {
     if (degree == 1) { 
         return 'Yes';
     }
@@ -64,8 +64,7 @@ function degreeNum(degree, num) {
     } 
     
     else {
-        (degree > 1);
-        return degreeNum(degree / 2);
+        return degreeNum(degree / num);
     }
 }
 
@@ -85,7 +84,6 @@ function degreeNum(degree) {
 
         if (degree == 0) {
             return 'No';
-            console.log(sum);
         }    
     }
 }
